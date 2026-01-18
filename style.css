@@ -105,14 +105,14 @@
     padding: 0 10px;
 }
 
-/* ซ้าย: + */
+
 .left_slot {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
 
-/* กลาง: ช่องพิมพ์กินพื้นที่ทั้งหมดที่เหลือ */
+
 .mid_slot {
     flex: 1 1 auto;
     min-width: 0;
@@ -121,7 +121,7 @@
     height: 50px;
 }
 
-/* textarea ให้เหมือนของจริง */
+
 #text_serach {
     width: 100%;
     height: 34px;
@@ -147,7 +147,7 @@
     gap: 6px;
 }
 
-/* ปุ่มไอคอน (hover แบบ Google) */
+
 .icon_btn,
 .icon_btn1,.profile {
     width: 40px;
@@ -180,7 +180,7 @@
     height: 20px;
 }
 
-/* ปุ่มโหมด AI (pill) */
+
 .ai_btn {
     position: relative;
     height: 36px;
@@ -204,7 +204,6 @@
     position: absolute;
     inset: 0;
     padding: 2px;
-    /* ความหนาขอบ */
     border-radius: inherit;
 
     background: linear-gradient(90deg,
@@ -223,19 +222,19 @@
     pointer-events: none;
 }
 
-/* hover */
+
 .ai_btn:hover {
     background:white
 }
 
-/* icon แว่น */
+
 .ai_icon {
     width: 18px;
     height: 18px;
     opacity: .85;
 }
 
-/* เอา focus ring แปลก ๆ ออก */
+
 .ai_btn:focus,
 .ai_btn:focus-visible {
     outline: none;
@@ -338,9 +337,8 @@
 @media (max-width: 600px) {
     .footer_bottom {
         justify-content: center;
-        /* จาก space-between → center */
         gap: 8px 16px;
-        /* ระยะห่างแนวตั้ง/แนวนอน */
+
     }
 
     .footer_left,
