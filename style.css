@@ -1,0 +1,353 @@
+/* div{
+    unicode-bidi: isolate;
+} */
+.all {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 11px;
+    padding-top: 12px;
+}
+
+.Gmail {
+    color: rgba(0, 0, 0, .87);
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.head1 {
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.head2 {
+    padding-left: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 48px;
+}
+
+.Gmail:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    border-radius: 50%;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    display: inline-block;
+    height: 40px;
+    padding: 4px;
+    position: relative;
+    width: 40px;
+    bottom: 8px;
+}
+
+.logo_google {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.google {
+    max-height: 92px;
+    position: relative;
+}
+
+.box_google img {
+    height: 132px;
+    width: auto;
+}
+
+.serach_box {
+    padding: 20px;
+}
+
+.bar {
+    margin: 0 auto;
+    max-width: 688px;
+    padding-top: 6px;
+    position: relative;
+}
+
+.serach_bar {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    background: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 26px;
+    box-shadow: 0px 3px 10px 0px rgba(31, 31, 31, 0.08);
+}
+
+.split_bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+}
+
+/* ซ้าย: + */
+.left_slot {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* กลาง: ช่องพิมพ์กินพื้นที่ทั้งหมดที่เหลือ */
+.mid_slot {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+/* textarea ให้เหมือนของจริง */
+#text_serach {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, .87);
+    display: block;
+}
+
+/* ขวา: ไอคอน + ปุ่ม AI */
+.right_slot {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ปุ่มไอคอน (hover แบบ Google) */
+.icon_btn,
+.icon_btn1,.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color .15s ease;
+}
+
+.icon_btn:hover,.profile:hover,.profile1:hover {
+    background-color: rgba(60, 64, 67, .08);
+}
+
+.icon_btn:active {
+    background-color: rgba(60, 64, 67, .16);
+}
+
+.icon_btn:focus,
+.icon_btn:focus-visible {
+    outline: none;
+}
+
+.icon_btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ปุ่มโหมด AI (pill) */
+.ai_btn {
+    position: relative;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 18px;
+    background: #f1f3f4;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #202124;
+    cursor: pointer;
+    border: none;
+}
+
+/* 🌈 ขอบสีรุ้ง */
+.ai_btn.rainbow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    /* ความหนาขอบ */
+    border-radius: inherit;
+
+    background: linear-gradient(90deg,
+            #4285F4,
+            #34A853,
+            #FBBC05,
+            #EA4335,
+            #4285F4);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+/* hover */
+.ai_btn:hover {
+    background:white
+}
+
+/* icon แว่น */
+.ai_icon {
+    width: 18px;
+    height: 18px;
+    opacity: .85;
+}
+
+/* เอา focus ring แปลก ๆ ออก */
+.ai_btn:focus,
+.ai_btn:focus-visible {
+    outline: none;
+}
+
+.ai_btn.rainbow::before {
+    opacity: 0;
+    transition: opacity .15s ease;
+}
+
+.ai_btn.rainbow:hover::before {
+    opacity: 1;
+}
+
+.action_buttons {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn_action {
+    height: 36px;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: #f8f9fa;
+    color: #3c4043;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn_action:hover {
+    border-color: #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    background: #f8f9fa;
+}
+
+.btn_action:focus,
+.btn_action:focus-visible {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+.language_section {
+    margin-top: 24px;
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #3c4043;
+}
+
+.language_section a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.language_section a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f2f2f2;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #3c4043;
+}
+
+.footer_top {
+    padding: 14px 40px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer_bottom {
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    color: #3c4043;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer_bottom {
+        justify-content: center;
+        /* จาก space-between → center */
+        gap: 8px 16px;
+        /* ระยะห่างแนวตั้ง/แนวนอน */
+    }
+
+    .footer_left,
+    .footer_right {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
